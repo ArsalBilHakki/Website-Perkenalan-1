@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <title>Perkenalan Arsal</title>
+    <style>
+        .language-switch {
+            text-align: right;
+            padding: 10px;
+            background-color: #1E90FF;
+        }
+        .language-switch a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .language-switch a:hover {
+            color: #FFA500;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #003366;
+            border-radius: 5px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .button {
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #FFA500;
+        }
+
+        .expandable {
+            cursor: pointer;
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .expandable:hover {
+            background-color: #002244;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #E6E6FA;
+            border: 1px solid #B0C4DE;
+            border-radius: 5px;
+        }
+
+        section {
+            background-color: #F8F8FF;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        aside {
+            background-color: #333333;
+            color: white;
+            border-left: 5px solid #FFD700;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header-universitas {
+            background-color: #002244;
+            color: #FFD700;
+            font-family: Georgia, serif;
+            text-align: center;
+            padding: 10px;
+        }
+        .header-welcome {
+            background-color: #003366;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #FFF;
+            text-decoration: none;
+            font-family: Verdana, sans-serif;
+        }
+        nav a:hover {
+            background-color: #4682B4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .photo-caption {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+            color: #555;
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; background-color: #F0F8FF;">
+
+    <div class="language-switch">
+        <a href="Index.html">ID</a>
+        <a href="Perkenalan EN.html">EN</a>
+        <a href="Perkenalan ES.html">ES</a>
+        <a href="Perkenalan PR.html">ES</a>
+    </div>
+
+    <div class="header-universitas">
+        <h1>Universitas Brawijaya</h1>
+    </div>
+
+    <div class="header-welcome">
+        <h2>Selamat Datang di Halaman Perkenalan Arsal</h2>
+    </div>
+
+    <nav>
+        <a href="#about">Tentang Saya</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#education">Pendidikan</a>
+        <a href="#experience">Pengalaman</a>
+        <a href="#contact">Kontak</a>
+        <a href="#gallery">Galeri</a>
+        <a href="#certificates">Sertifikat</a>
+    </nav>
+
+    <div style="display: flex; flex-wrap: wrap;">
+
+        <section style="flex: 1;">
+            <h2 id="about">Tentang Saya</h2>
+            <p>Nama saya Arsal Bil Hakki R. Said, seorang mahasiswa Sistem Informasi di Universitas Brawijaya dengan dedikasi tinggi terhadap kreativitas dan solusi berbasis data. Saya memiliki pengalaman lebih dari tiga tahun sebagai Master of Ceremony dan aktif dalam debat serta orasi publik.</p>
+
+            <button class="expandable" onclick="toggleDetails('skills-details')">Keahlian</button>
+            <div id="skills-details" class="details">
+                <ul>
+                    <li>Kepemimpinan: Memimpin tim dengan efektif untuk mencapai tujuan bersama.</li>
+                    <li>Komunikasi: Kemampuan berbicara di depan umum dan menyampaikan ide dengan jelas.</li>
+                    <li>Berpikir Kritis: Menganalisis masalah dan menemukan solusi inovatif.</li>
+                    <li>Kerja Tim: Bekerja sama dengan berbagai individu untuk mencapai hasil terbaik.</li>
+                </ul>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('education-details')">Pendidikan</button>
+            <div id="education-details" class="details">
+                <ul>
+                    <li><strong>MAN 1 Pekanbaru (2021-2024):</strong> Jurusan Matematika dan IPA, dengan dasar yang kuat dalam prinsip-prinsip ilmiah dan matematika.</li>
+                    <li><strong>Universitas Brawijaya (2024-sekarang):</strong> Program Studi Sistem Informasi, mempelajari analisis sistem, manajemen basis data, dan pengembangan perangkat lunak.</li>
+                </ul>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('experience-details')">Pengalaman</button>
+            <div id="experience-details" class="details">
+                <ul>
+                    <li>Kepala Pengkaderan di Rohani Islam MAN 1 Pekanbaru</li>
+                    <li>Ketua Panitia Pekan Muharram MAN 1 Pekanbaru</li>
+                    <li>Koordinator Kompetisi Studi Islam Olimpiade Romansa</li>
+                </ul>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('contact-details')">Kontak</button>
+            <div id="contact-details" class="details">
+                <ul>
+                    <li>WhatsApp: +62 896 6964 6219</li>
+                    <li>Line: arsal_bilhakki</li>
+                    <li>Instagram: <a href="https://www.instagram.com/arsal_bilhakki" target="_blank">@arsal_bilhakki</a></li>
+                    <li>Email: <a href="mailto:arsalbilhakki@student.ub.ac.id">arsalbilhakki@student.ub.ac.id</a></li>
+                    <li>Lokasi: Malang, Jawa Timur</li>
+                </ul>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('gallery-details')">Galeri</button>
+            <div id="gallery-details" class="details">
+                <div class="photo-grid">
+                    <div>
+                        <img src="foto1.jpg" alt="Foto 1">
+                        <p class="photo-caption">Keterangan Foto 1</p>
+                    </div>
+                    <div>
+                        <img src="foto2.jpg" alt="Foto 2">
+                        <p class="photo-caption">Keterangan Foto 2</p>
+                    </div>
+                    <div>
+                        <img src="foto3.jpg" alt
+                        alt="Foto 3">
+                        <p class="photo-caption">Keterangan Foto 3</p>
+                    </div>
+                    <div>
+                        <img src="foto4.jpg" alt="Foto 4">
+                        <p class="photo-caption">Keterangan Foto 4</p>
+                    </div>
+                    <div>
+                        <img src="foto5.jpg" alt="Foto 5">
+                        <p class="photo-caption">Keterangan Foto 5</p>
+                    </div>
+                    <div>
+                        <img src="foto6.jpg" alt="Foto 6">
+                        <p class="photo-caption">Keterangan Foto 6</p>
+                    </div>
+                    <div>
+                        <img src="foto7.jpg" alt="Foto 7">
+                        <p class="photo-caption">Keterangan Foto 7</p>
+                    </div>
+                    <div>
+                        <img src="foto8.jpg" alt="Foto 8">
+                        <p class="photo-caption">Keterangan Foto 8</p>
+                    </div>
+                    <div>
+                        <img src="foto9.jpg" alt="Foto 9">
+                        <p class="photo-caption">Keterangan Foto 9</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('certificates-details')">Sertifikat</button>
+            <div id="certificates-details" class="details">
+                <div class="photo-grid">
+                    <div>
+                        <img src="sertifikat1.jpg" alt="Sertifikat 1">
+                        <p class="photo-caption">Keterangan Sertifikat 1</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat2.jpg" alt="Sertifikat 2">
+                        <p class="photo-caption">Keterangan Sertifikat 2</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat3.jpg" alt="Sertifikat 3">
+                        <p class="photo-caption">Keterangan Sertifikat 3</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat4.jpg" alt="Sertifikat 4">
+                        <p class="photo-caption">Keterangan Sertifikat 4</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat5.jpg" alt="Sertifikat 5">
+                        <p class="photo-caption">Keterangan Sertifikat 5</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat6.jpg" alt="Sertifikat 6">
+                        <p class="photo-caption">Keterangan Sertifikat 6</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat7.jpg" alt="Sertifikat 7">
+                        <p class="photo-caption">Keterangan Sertifikat 7</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat8.jpg" alt="Sertifikat 8">
+                        <p class="photo-caption">Keterangan Sertifikat 8</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat9.jpg" alt="Sertifikat 9">
+                        <p class="photo-caption">Keterangan Sertifikat 9</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer style="background-color: #002244; color: #FFD700; text-align: center; padding: 10px;">
+        <p>Hak Cipta © 2025 - Dibuat oleh Arsal</p>
+        <p>Kontak: <a href="mailto:arsalbilhakki@student.ub.ac.id" style="color: #FFA500;">arsalbilhakki@student.ub.ac.id</a></p>
+    </footer>
+
+</body>
+</html>

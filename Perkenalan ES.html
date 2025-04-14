@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Introducción</title>
+    <style>
+
+        .language-switch {
+            text-align: right;
+            padding: 10px;
+            background-color: #1E90FF;
+        }
+        .language-switch a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+        .language-switch a:hover {
+            color: #FFA500;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            padding: 5px 10px;
+        }
+        nav a:hover {
+            background-color: #003366;
+            border-radius: 5px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .button {
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #FFA500;
+        }
+
+        .expandable {
+            cursor: pointer;
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            border: none;
+            text-align: left;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .expandable:hover {
+            background-color: #002244;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #E6E6FA;
+            border: 1px solid #B0C4DE;
+            border-radius: 5px;
+        }
+
+        section {
+            background-color: #F8F8FF;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        aside {
+            background-color: #333333;
+            color: white;
+            border-left: 5px solid #FFD700;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .header-university {
+            background-color: #002244;
+            color: #FFD700;
+            font-family: Georgia, serif;
+            text-align: center;
+            padding: 10px;
+        }
+        .header-welcome {
+            background-color: #003366;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 10px;
+        }
+        nav {
+            background-color: #1E90FF;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #FFF;
+            text-decoration: none;
+            font-family: Verdana, sans-serif;
+        }
+        nav a:hover {
+            background-color: #4682B4;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+        .photo-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .photo-caption {
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+            color: #555;
+        }
+    </style>
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 0; background-color: #F0F8FF;">
+
+    <div class="language-switch">
+        <a href="Index.html">ID</a>
+        <a href="Perkenalan EN.html">EN</a>
+        <a href="Perkenalan ES.html">ES</a>
+        <a href="Perkenalan PR.html">ES</a>
+    </div>
+
+    <div class="header-university">
+        <h1>Universidad Brawijaya</h1>
+    </div>
+
+    <div class="header-welcome">
+        <h2>Bienvenido a la página de introducción de Arsal</h2>
+    </div>
+
+    <nav>
+        <a href="#about">Sobre Mí</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#education">Educación</a>
+        <a href="#experience">Experiencia</a>
+        <a href="#contact">Contacto</a>
+        <a href="#gallery">Galería</a>
+        <a href="#certificates">Certificados</a>
+    </nav>
+
+    <div style="display: flex; flex-wrap: wrap;">
+        <section style="flex: 1;">
+            <h2 id="about">Sobre Mí</h2>
+            <p>Mi nombre es Arsal, estudiante de Sistemas de Información en la Universidad Brawijaya, dedicado a soluciones creativas y basadas en datos. Tengo más de tres años de experiencia como Maestro de Ceremonias profesional y participo activamente en debates y oratoria pública.</p>
+
+            <button class="expandable" onclick="toggleDetails('skills-details')">Habilidades</button>
+            <div id="skills-details" class="details">
+                <ul>
+                    <li>Liderazgo: Dirigir equipos de manera efectiva para lograr objetivos comunes.</li>
+                    <li>Comunicación: Hablar en público y transmitir ideas con claridad.</li>
+                    <li>Pensamiento Crítico: Analizar problemas y encontrar soluciones innovadoras.</li>
+                    <li>Trabajo en Equipo: Colaborar con individuos para producir los mejores resultados.</li>
+                </ul>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('education-details')">Educación</button>
+            <div id="education-details" class="details">
+                <ul>
+                    <li><strong>MAN 1 Pekanbaru (2021-2024):</strong> Especialización en Matemáticas y Ciencias, estableciendo una sólida base en principios científicos y matemáticas.</li>
+                    <li><strong>Universidad Brawijaya (2024-presente):</strong> Estudiando Sistemas de Información, centrado en análisis de sistemas, gestión de bases de datos y desarrollo de software.</li>
+                </ul>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('experience-details')">Experiencia</button>
+            <div id="experience-details" class="details">
+                <ul>
+                    <li>Jefe de Desarrollo de Cuadros en Rohani Islam MAN 1 Pekanbaru</li>
+                    <li>Organizador Principal de la Semana de Muharram en MAN 1 Pekanbaru</li>
+                    <li>Coordinador del Concurso de Estudios Islámicos en la Olimpiada Romansa</li>
+                </ul>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('contact-details')">Contacto</button>
+            <div id="contact-details" class="details">
+                <ul>
+                    <li>WhatsApp: +62 9669 6219</li>
+                    <li>Line: arsal_bilhakki</li>
+                    <li>Instagram: <a href="https://www.instagram.com/arsal_bilhakki" target="_blank">@arsal_bilhakki</a></li>
+                    <li>Email: <a href="mailto:arsalbilhakki@student.ub.ac.id">arsalbilhakki@student.ub.ac.id</a></li>
+                    <li>Ubicación: Malang, Java Oriental</li>
+                </ul>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('gallery-details')">Galería</button>
+            <div id="gallery-details" class="details">
+                <div class="photo-grid">
+                    <div>
+                        <img src="foto1.jpg" alt="Foto 1">
+                        <p class="photo-caption">Descripción de la Foto 1</p>
+                    </div>
+                    <div>
+                        <img src="foto2.jpg" alt="Foto 2">
+                        <p class="photo-caption">Descripción de la Foto 2</p>
+                    </div>
+                    <div>
+                        <img src="foto3.jpg" alt="Foto 3">
+                        <p class="photo-caption">Descripción de la Foto 3</p>
+                    </div>
+                    <div>
+                        <img src="foto4.jpg" alt="Foto 4">
+                        <p class="photo-caption">Descripción de la Foto 4</p>
+                    </div>
+                    <div>
+                        <img src="foto5.jpg" alt="Foto 5">
+                        <p class="photo-caption">Descripción de la Foto 5</p>
+                    </div>
+                    <div>
+                        <img src="foto6.jpg" alt="Foto 6">
+                        <p class="photo-caption">Descripción de la Foto 6</p>
+                    </div>
+                    <div>
+                        <img src="foto7.jpg" alt="Foto 7">
+                        <p class="photo-caption">Descripción de la Foto 7</p>
+                    </div>
+                    <div>
+                        <img src="foto8.jpg" alt="Foto 8">
+                        <p class="photo-caption">Descripción de la Foto 8</p>
+                    </div>
+                    <div>
+                        <img src="foto9.jpg" alt="Foto 9">
+                        <p class="photo-caption">Descripción de la Foto 9</p>
+                    </div>
+                </div>
+            </div>
+
+            <button class="expandable" onclick="toggleDetails('certificates-details')">Certificados</button>
+            <div id="certificates-details" class="details">
+                <div class="photo-grid">
+                    <div>
+                        <img src="sertifikat1.jpg" alt="Certificado 1">
+                        <p class="photo-caption">Descripción del Certificado 1</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat2.jpg" alt="Certificado 2">
+                        <p class="photo-caption">Descripción del Certificado 2</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat3.jpg" alt="Certificado 3">
+                        <p class="photo-caption">Descripción del Certificado 3</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat4.jpg" alt="Certificado 4">
+                        <p class="photo-caption">Descripción del Certificado 4</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat5.jpg" alt="Certificado 5">
+                        <p class="photo-caption">Descripción del Certificado 5</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat6.jpg" alt="Certificado 6">
+                        <p class="photo-caption">Descripción del Certificado 6</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat7.jpg" alt="Certificado 7">
+                        <p class="photo-caption">Descripción del Certificado 7</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat8.jpg" alt="Certificado 8">
+                        <p class="photo-caption">Descripción del Certificado 8</p>
+                    </div>
+                    <div>
+                        <img src="sertifikat9.jpg" alt="Certificado 9">
+                        <p class="photo-caption">Descripción del Certificado 9</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer style="background-color: #002244; color: #FFD700; text-align: center; padding: 10px;">
+        <p>Derechos de Autor © 2025 - Creado por Arsal</p>
+        <p>Contacto: <a href="mailto:arsalbilhakki@student.ub.ac.id" style="color: #FFA500;">arsalbilhakki@student.ub.ac.id</a></p>
+    </footer>
+
+</body>
+</html>
